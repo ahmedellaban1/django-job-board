@@ -1,4 +1,4 @@
-jub :
+ job :
     - title
     - location
     - job type
