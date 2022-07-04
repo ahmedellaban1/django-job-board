@@ -8,7 +8,8 @@ JOB = (
 
 # Create your models here.
 class Job(models.Model):
-    title = models.CharField(max_length=100, choices=JOB)
+    title = models.CharField(max_length=100)
+    JobType = models.CharField(max_length=100, choices=JOB)
     # location
 
 
