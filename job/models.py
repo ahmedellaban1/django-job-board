@@ -22,8 +22,15 @@ class Job(models.Model):
     vacancy = models.IntegerField(default=1)
     salary = models.IntegerField(default=0)
     experiences = models.IntegerField(default=1)
-    # category = models.CharField(max_length=30, choices=JOB_CATEGORY)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
     # location
 
     def __str__(self):
         return self.title, ' in ', self.published_at
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
